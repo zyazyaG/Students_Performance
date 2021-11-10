@@ -29,23 +29,6 @@ def show_info(df):
     
     return 
 
-# A function "remove_outliers" eliminates data that has value above the quantiles. 
-
-# In[ ]:
-
-
-def remove_outliers(df, column):
-    
-    Q1 = df[column].quantile(0.25)
-    Q3 = df[column].quantile(0.75)
-    IQR = Q3 - Q1
-    
-    Lower_Fence = Q1 - (1.5 * IQR)
-    Upper_Fence = Q3 + (1.5 * IQR)
-    
-    new_df = df[~((df [column] < Lower_Fence) |(df[column] > Upper_Fence))]
-    
-    return new_df
 
 
 def values (df, col_list):
@@ -82,5 +65,32 @@ def conversion (df, column, d_type):
     return
 
 
+
+def chi_test(cross_tabs):
     
+    chi, p, dof, con_table = stats.chi2_contingency(cross_tabs)
+    print(f'Chi-Squared = {chi}')
+    print(f'p-value= {p}')
+    print(f'Degrees of Freedom = {dof}')
+
+
+
+def percentage(cross_tab):
+    
+    df = pd.DataFrame(columns = ['Pass', 'Fail', 'Withdraw', 'Distinct', 'Success', 'Failure'])
+    
+    for i, row in cross_tab.iterrows():
+        
+        percent = row[0] + row[1] + row[2] + row[3]
+        
+        df.loc[i,'Distinct'] = round((row[0] * 100 / percent),2)
+        df.loc[i,'Fail'] = round((row[1] * 100 / percent),2)
+        df.loc[i,'Pass']= round((row[2] * 100 / percent),2)
+        df.loc[i,'Withdraw'] = round((row[3] * 100 / percent),2)
+        df.loc[i,'Success'] = df.loc[i,'Distinct'] + df.loc[i,'Pass']
+        df.loc[i,'Failure'] =  df.loc[i,'Fail'] + df.loc[i,'Withdraw']
+        
+    return df
+    
+                           
                 
