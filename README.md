@@ -34,7 +34,7 @@
 2. [EDA Notebook](notebooks/exploratory/EDA.ipynb)
 3. [Modeling Notebook](notebooks/exploratory/Modeling.ipynb)
 4. [Final Recomendations Notebook](notebooks/report/Students_Performance.ipynb)
-6. [Presentation Slides](notebooks/report/presentation.pdf)
+6. [Presentation Slides](notebooks/report/Students_Performance.pdf)
 
 
 ## Business Problem
