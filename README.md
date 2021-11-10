@@ -3,7 +3,7 @@
 **Author:** Aziza Gulyamova
 ***
 
-![image1](figures/image1.png)
+![image1](figures/image1.jpg)
 
 ### Setup Instructions
 
