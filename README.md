@@ -231,7 +231,7 @@ Based on the GridSearch Results, the new models were built and evaluated. The re
 
 ## Logistic Regression with GridSearched Parameters
 
-## Holdout Set: Recall Score - 0.74, F1 Score - 0.6, Accuracy - 0.74
+### Holdout Set: Recall Score - 0.74, F1 Score - 0.6, Accuracy - 0.74
 
 **Confusion Matrix**
 
