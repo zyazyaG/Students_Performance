@@ -27,10 +27,10 @@ from sklearn.metrics import precision_score, recall_score, accuracy_score, f1_sc
 
 def print_metrics(labels, preds):
     
-    print("Precision Score: {}".format(precision_score(labels, preds, average= 'weighted')))
-    print("Recall Score: {}".format(recall_score(labels, preds,average='weighted')))
+    print("Precision Score: {}".format(precision_score(labels, preds)))
+    print("Recall Score: {}".format(recall_score(labels, preds)))
     print("Accuracy Score: {}".format(accuracy_score(labels, preds)))
-    print("F1 Score: {}".format(f1_score(labels, preds,average= 'weighted')))
+    print("F1 Score: {}".format(f1_score(labels, preds)))
     print("\n")
     return
 
