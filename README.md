@@ -7,7 +7,7 @@
 
 ### Setup Instructions
 
-!!!!!!!!!!!!!!!
+In order to create and activate environment for this project, navigate to the the project directory with `cd` and run `conda env create --file env1.yml` in your terminal. Next, run `conda activate env1`.
 
 ### Repository Directory
 
