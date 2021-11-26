@@ -151,7 +151,7 @@ Before proceeding to modeling, multiple statistical analysis and test were perfo
 
 ### Distribution of Outcomes Based on Disability
 
-![disab](figures/disab.png)
+![disab](figures/disability.png)
 
 * Students with no disability have slightly larger passing rate than students with disability.
 
@@ -163,7 +163,7 @@ For binary classification modeling purposes, the target variable was **binarized
 Since the goal was to identify as much as feasible failing students, the **Recall Scor**e was considered **most significant**, in order to **lower the values of false negative predictions.**
 
 In order to **automate the coding** workflow, the **pipeline with following steps** was used:
-- **ColumnTransformer** (transform and encode categorical data)
+- **OneHotEncoder** (transform and encode categorical data)
 - **StandardScaler** (scale the data into one magnitude)
 - **SMOTE** (upsample the minority class)
 - **Classification algorithm**
@@ -190,7 +190,7 @@ To **store the evaluation scores for each model,** the user-defined funtion **"m
 
 
 
-## Linear Regression with Upsampled Data
+## Logistic Regression with Upsampled Data
 
 ### Test Set Recall Score - 0.71, F1 Score - 0.6, Accuracy - 0.74
 
@@ -249,6 +249,12 @@ ANOVA Test was performed in order to determine the underlying significance of th
 
 ![anova](figures/anova.png)
 
+### Feature Importance
+
+![imp](figures/imp.png)
+
+* **Mean Score** is giving unexpected results, which makes it worth to investigate it further with Logistic Regression and p-value.
+* 
 # Conclusion
 
 The Logistic Regression model was able to predict 74% of failing students on holdout data, with falsely predicting only 26% as passing. Based on the EDA, statistical analysis and modeling, following are appropriate steps to take in order to navigate students and increase success rate of institution.
@@ -259,9 +265,9 @@ The Logistic Regression model was able to predict 74% of failing students on hol
 2. Provide excessive support for students who are located in regions with low imd.
 3. Advise students in lower age range to closely communicate with students that are older.
 
-4. The critical role in determining the students outcome is played by the score on assessments, thus the additional study sources would be helpfull for students success.
-5. The level of interaction of student on online tools has significant impact on the final result, thus advise students to closely interact with online study materials
-6. Course length plays small but statistically significant role in outcome, therefore determine optimal course length.
+4. The critical role in determining the students outcome is played by the score on assessments, thus the additional study sources would be helpfull for students' success.
+5. The level of interaction of student on online tools has significant impact on the final result, therefore advise students to closely interact with online study materials
+6. Course length plays small but statistically significant role in outcome, thus determine optimal course length.
 
 
 ## Future Steps
