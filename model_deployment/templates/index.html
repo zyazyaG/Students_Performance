@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Final Result Prediction Form</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styling.css') }}" type="text/css"/>
+  </head>
+  <body>
+    <div class="testbox">
+      <form action="/predict" method="POST" target="_blank">
+        <div class="banner">
+          <h1>Final Result Prediction Form</h1>
+        </div>
+        <h2 style="text-align: center;">  Fill out following form to predict student's outcome in a course </h2>
+
+        <div class="item">
+          <label for="course_length">Course Length</label>
+          <select id="course_length" name="course_length">  Select length of the course
+            <option disabled selected value> -- select an option -- </option>
+            <option value="234">234</option>
+            <option value="240">240</option>
+            <option value="241">241</option>
+            <option value="261">261</option>
+            <option value="262">262</option>
+            <option value="268">268</option>
+            <option value="269">269</option>
+          </select>
+        </div>
+
+        <div class="item">
+          <label for="code_module">Code Module</label>
+          <select id="code_module" name="code_module">  Select Code corresponding to the Course
+            <option disabled selected value> -- select an option -- </option>
+            <option value="AAA">AAA</option>
+            <option value="BBB">BBB</option>
+            <option value="CCC">CCC</option>
+            <option value="DDD">DDD</option>
+            <option value="EEE">EEE</option>
+            <option value="FFF">FFF</option>
+            <option value="GGG">GGG</option>
+          </select>
+        </div>
+        
+
+        <div class="item">
+          <label for="date_registration">Registration</label>
+          <input type="number" id="date_registration" name="date_registration">  Enter number of days student registered before the course beginning.
+        </div>
+
+
+      <div class="item">
+          <label for="sum_click">Sum of Clicks</label>
+          <input type="number" id="sum_click" name="sum_click">  Sum of clicks student made on Vle for given course
+        </div>
+
+        <div class="item">
+          <label for="gender">Gender</label>
+          <select id="gender" name="gender">
+            <option disabled selected value> -- select an option -- </option>
+            <option value="F">Female</option>
+            <option value="N">Male</option>
+          </select>
+        </div>
+
+        <div class="item">
+          <label for="region">Region</label>
+          <select id="region" name="region">  Select the region where student is located
+            <option disabled selected value> -- select an option -- </option>
+            <option value="East Anglian Region">East Anglian Region</option>
+            <option value="East Midlands Region">East Midlands Region</option>
+            <option value="Ireland">Ireland</option>
+            <option value="London Region">London Region</option>
+            <option value="North Region">North Region</option>
+            <option value="Scotland">Scotland</option>
+            <option value="South East Region">South East Region</option>
+            <option value="South Region">South Region</option>
+            <option value="South West Region">South West Region</option>
+            <option value="Wales">Wales</option>
+          </select>
+        </div>
+
+        <div class="item">
+          <label for="highest_education">Highest Level of Education</label>
+          <select id="highest_education" name="highest_education">
+            <option disabled selected value> -- select an option -- </option>
+            <option value="A Level or Equivalent">A Level or Equivalent</option>
+            <option value="HE Qualification">HE Qualification</option>
+            <option value="Lower Than A Level">Lower Than A Level</option>
+            <option value="No Formal quals">No Formal quals</option>
+            <option value="Post Graduate Qualification">Post Graduate Qualification</option>
+          </select>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
