@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" type="text/css"/>
+  </head>
+  <body>
+    <div class="testbox1">
+      <form action="/predict" method="POST" target="_blank">
+        <div class="banner">
+          <h1>Prediction Result</h1>
+        </div>
+        <h2 style="text-align: center;"> Given the information on the form, the student's outcome in a course is following: </h2>
+
+        <div class="prediction_res">
+          <div class="thumbnail">
+            {% if prediction [0]== 0 %}
+            <h3>Pass</h3>
+            <img src="static/images/happyface.jpeg" class="emoji" />
+            <div class = "recomendations">
+              <h2 style="text-align: center;" class= "recom">You Are Doing Great!</h2>
+              <h2 style="text-align: center;" class= "recom">Keep Up!</h2>
+            </div>
+            {% endif %}
+          </div>
+          <div class="thumbnail">
+            {% if prediction[0] == 1 %}
+            <h3>Fail</h3>
+            <img src="static/images/sadface.png" class="emoji" />
+            <div class = "recomendations">
+              <h2 class= "recom">Recommendations:</h2>
+              <ul>
+                <li>Utilize additional study sources and tools.</li>
+                <li>Closely interact with online study materials.</li>
+                <li>In student is in 0-35 age range, closely communicate with students that are older.</li>
+              </ul>
+            </div>
+            {% endif %}
+          </div>
+        </div>
+      </form>
+    </div>
+    
+  </body>
+</html>
