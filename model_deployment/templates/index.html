@@ -89,6 +89,70 @@
             <option value="Post Graduate Qualification">Post Graduate Qualification</option>
           </select>
         </div>
+
+        <div class="item">
+          <label for="imd_band">IMD Band</label> 
+          <select id="imd_band" name="imd_band">  Select the range of Indices of Multiple Deprivation
+            <option disabled selected value> -- select an option -- </option>
+            <option value="0-10%">0-10%</option>
+            <option value="10-20%">10-20%</option>
+            <option value="20-30%">20-30%</option>
+            <option value="30-40%">30-40%</option>
+            <option value="40-50%">40-50%</option>
+            <option value="50-60%">50-60%</option>
+            <option value="60-70%">60-70%</option>
+            <option value="70-80%">70-80%</option>
+            <option value="80-90%">80-90%</option>
+            <option value="90-100%">90-100%</option>
+          </select>
+        </div>
+
+        <div class="item">
+          <label for="age_band">Age Band</label>
+          <select id="age_band" name="age_band">
+            <option disabled selected value> -- select an option -- </option>
+            <option value="0-35">0-35</option>
+            <option value="35-55">35-55</option>
+            <option value="55&lt;=">55&lt;=</option>
+          </select>
+        </div>
+
+        <div class="item">
+          <label for="attempts">Number of Previous Attempts</label>
+          <select id="attempts" name="attempts">
+            <option disabled selected value> -- select an option -- </option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </div>
+
+         <div class="item">
+          <label for="studied_credits">Studied Credits</label>
+          <input type="number" id="studied_credits" name="studied_credits">  Number of credits student acquired by the beginning of the course
+        </div>
+
+        
+        <div class="item">
+          <label for="disability">Disability</label>
+          <select id="disability" name="disability">
+            <option disabled selected value> -- select an option -- </option>
+            <option value="Y">Yes</option>
+            <option value="N">No</option>
+          </select>
+        </div>
+
+       
+
+        <div class="item">
+          <label for="mean_score">Mean Score</label>
+          <input type="number" step="0.01" min = "0" id="mean_score" name="mean_score">  Average assessment score of the student on a course
+        </div>
+
+        <div class="btn-block">
+          <button type="submit" href="/">SUBMIT</button>
+        </div>
       </form>
     </div>
   </body>
